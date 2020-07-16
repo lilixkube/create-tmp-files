@@ -1,5 +1,6 @@
 ---
-- become: yes
+- hosts: localtw
+  become: yes
   tasks:
      - name: create file /tmp/2.txt 
        file:
