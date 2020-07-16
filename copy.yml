@@ -1,0 +1,24 @@
+---
+- hosts: web
+  become: yes
+  tasks:
+     - name: create file /tmp/2.txt 
+       file:
+        path: "/tmp/2.txt"
+        owner: root
+        group: root
+        mode: 0644
+        state: touch
+
+     - name: create files  in /tmp/nn.txt
+       file:
+        path: "/tmp/{{item}}"
+        owner: root
+        group: root
+        mode: 0700
+        state: touch
+       with_items:
+        - "3.txt"
+        - "4.txt"
+        - "5.txt"
+...
