@@ -5,6 +5,7 @@ ansible_port=22
 
 [testweb]
 #linuxtest1 ansible_host=3.127.132.140
+#linuxhosts
 linuxtest2 ansible_host=18.158.56.229
 linuxtest3 ansible_host=3.122.85.24
 
